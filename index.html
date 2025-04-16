@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Содержание обновлений</title>
+  <style>
+    /* Видео на фоне */
+    #background-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+
+    /* Основной стиль */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      background-color: #000; /* на случай если видео не загрузится */
+    }
+
+    .content {
+      position: relative;
+      padding: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: rgba(0, 0, 0, 0.5); /* прозрачная подложка */
+      border-radius: 12px;
+      margin-top: 60px;
+    }
+
+    h1 {
+      color: #fff;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      background: rgba(255, 255, 255, 0.1);
+      margin-bottom: 10px;
+      padding: 10px 15px;
+      border-left: 5px solid #00bfff;
+      transition: background 0.2s;
+      border-radius: 5px;
+    }
+
+    li:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    a {
+      text-decoration: none;
+      color: #00bfff;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Фоновое видео -->
+  <video autoplay muted loop id="background-video">
+    <source src="title.mp4" type="video/mp4">
+    Ваш браузер не поддерживает видео.
+  </video>
+
+  <!-- Контент -->
+  <div class="content">
+    <h1>Содержание обновлений</h1>
+    <ul id="update-list">
+      <li><a href="https://musicford.github.io/news-aion-25.03.19/">Обновление март неделя 3, 2025</a></li>
+      <li><a href="https://musicford.github.io/MarchWeek4/">Обновление март неделя 4, 2025</a></li>
+      <!-- Добавляй новые строки ниже -->
+      <!-- <li><a href="update3.html">Обновление от 20 апреля 2025</a></li> -->
+    </ul>
+  </div>
+
+</body>
+</html>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Содержание обновлений</title>
   <style>
-    /* Видео на фоне */
+    /* Фоновое видео */
     #background-video {
       position: fixed;
       right: 0;
@@ -15,12 +15,11 @@
       object-fit: cover;
     }
 
-    /* Основной стиль */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       color: #fff;
-      background-color: #000; /* на случай если видео не загрузится */
+      background-color: #000;
     }
 
     .content {
@@ -28,7 +27,7 @@
       padding: 40px;
       max-width: 800px;
       margin: 0 auto;
-      background-color: rgba(0, 0, 0, 0.5); /* прозрачная подложка */
+      background-color: rgba(0, 0, 0, 0.5);
       border-radius: 12px;
       margin-top: 60px;
     }
@@ -64,6 +63,55 @@
     a:hover {
       text-decoration: underline;
     }
+
+    /* Секция карточек */
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .card-link {
+      display: block;
+      width: 200px;
+      height: 120px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .card-link::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      transition: background 0.3s ease;
+    }
+
+    .card-link span {
+      position: relative;
+      z-index: 1;
+      color: #fff;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 120px;
+      text-shadow: 0 0 5px #000;
+    }
+
+    .card-link:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 191, 255, 0.8);
+    }
+
+    .card-link:hover::before {
+      background: rgba(0, 0, 0, 0.2);
+    }
   </style>
 </head>
 <body>
@@ -78,16 +126,23 @@
   <div class="content">
     <h1>Содержание обновлений</h1>
     <ul id="update-list">
-       <li><a href="https://musicford.github.io/news-aion-25.03.19/">Обновление март неделя 3, 2025</a></li>
-       <li><a href="https://musicford.github.io/PromoX/">Обновление промежуточное промо март, 2025</a></li>
-       <li><a href="https://musicford.github.io/MarchWeek4/">Обновление март неделя 4, 2025</a></li>
-       <li><a href="https://musicford.github.io/april-week-1/">Обновление апрель неделя 1, 2025</a></li>
-       <li><a href="https://musicford.github.io/april-week-2/">Обновление апрель неделя 2, 2025</a></li>
-       <li><a href="https://musicford.github.io/april-week-3/">Обновление апрель неделя 3, 2025</a></li>
-       
-      
-     
+      <li><a href="https://musicford.github.io/news-aion-25.03.19/">Обновление март неделя 3, 2025</a></li>
+      <li><a href="https://musicford.github.io/PromoX/">Обновление промежуточное промо март, 2025</a></li>
+      <li><a href="https://musicford.github.io/MarchWeek4/">Обновление март неделя 4, 2025</a></li>
+      <li><a href="https://musicford.github.io/april-week-1/">Обновление апрель неделя 1, 2025</a></li>
+      <li><a href="https://musicford.github.io/april-week-2/">Обновление апрель неделя 2, 2025</a></li>
+      <li><a href="https://musicford.github.io/april-week-3/">Обновление апрель неделя 3, 2025</a></li>
     </ul>
+
+    <!-- Карточки -->
+    <div class="cards">
+      <a href="t.me/musicFaionkorea" target="_blank" class="card-link" style="background-image: url('tg-preview.jpg');">
+        <span>Telegram</span>
+      </a>
+      <a href="https://boosty.to/musicford" target="_blank" class="card-link" style="background-image: url('support-preview.jpg');">
+        <span>тык сюда если хотите поддержать MusicF</span>
+      </a>
+    </div>
   </div>
 
 </body>

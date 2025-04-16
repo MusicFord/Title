@@ -20,6 +20,7 @@
       font-family: Arial, sans-serif;
       color: #fff;
       background-color: #000;
+      padding-bottom: 150px; /* отступ для фиксированного футера */
     }
 
     .content {
@@ -64,19 +65,21 @@
       text-decoration: underline;
     }
 
-    /* Секция карточек */
-    .cards {
+    /* Фиксированный футер с карточками */
+    .fixed-footer {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
       display: flex;
-      justify-content: center;
       gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 40px;
+      z-index: 10;
     }
 
     .card-link {
       display: block;
-      width: 200px;
-      height: 120px;
+      width: 180px;
+      height: 100px;
       background-size: cover;
       background-position: center;
       border-radius: 12px;
@@ -99,14 +102,14 @@
       z-index: 1;
       color: #fff;
       font-weight: bold;
-      font-size: 16px;
-      line-height: 120px;
+      font-size: 15px;
+      line-height: 100px;
       text-shadow: 0 0 5px #000;
     }
 
     .card-link:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px rgba(0, 191, 255, 0.8);
+      transform: scale(1.08);
+      box-shadow: 0 0 20px rgba(0, 191, 255, 0.9);
     }
 
     .card-link:hover::before {
@@ -133,16 +136,16 @@
       <li><a href="https://musicford.github.io/april-week-2/">Обновление апрель неделя 2, 2025</a></li>
       <li><a href="https://musicford.github.io/april-week-3/">Обновление апрель неделя 3, 2025</a></li>
     </ul>
+  </div>
 
-    <!-- Карточки -->
-    <div class="cards">
-      <a href="t.me/musicFaionkorea" target="_blank" class="card-link" style="background-image: url('tg-preview.jpg');">
-        <span>Telegram</span>
-      </a>
-      <a href="https://boosty.to/musicford" target="_blank" class="card-link" style="background-image: url('support-preview.jpg');">
-        <span>тык сюда если хотите поддержать MusicF</span>
-      </a>
-    </div>
+  <!-- Фиксированный футер с карточками -->
+  <div class="fixed-footer">
+    <a href="https://t.me/твой_telegram" target="_blank" class="card-link" style="background-image: url('tg-preview.jpg');">
+      <span>Наш Telegram</span>
+    </a>
+    <a href="https://donate.example.com" target="_blank" class="card-link" style="background-image: url('support-preview.jpg');">
+      <span>Поддержать</span>
+    </a>
   </div>
 
 </body>
